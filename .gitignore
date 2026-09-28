@@ -1,0 +1,25 @@
+# ---- Секреты и данные сервера: никогда не коммитить ----
+config.php
+.setup-answers
+.indexnow-key
+.env
+*.env
+leads/
+*.csv
+
+# ---- Архивы для загрузки на сервер ----
+*.zip
+
+# ---- Файлы подтверждения поисковиков и ключ IndexNow (создаются на сервере) ----
+site/yandex_*.html
+site/google*.html
+site/[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]*.txt
+
+# ---- Мусор систем и редакторов ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+*.swp

@@ -1,0 +1,11 @@
+# Скрипты и конфиги — всегда с переводом строки LF, иначе bash на сервере сломается
+* text=auto eol=lf
+*.sh text eol=lf
+*.php text eol=lf
+
+# Бинарные файлы не трогать
+*.woff2 binary
+*.webp binary
+*.jpg binary
+*.png binary
+*.ico binary

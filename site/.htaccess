@@ -1,0 +1,63 @@
+# ================================================================
+#  antonshkel.ru — настройки сервера (Apache)
+# ================================================================
+AddDefaultCharset UTF-8
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1) Без www: www.antonshkel.ru → https://antonshkel.ru (сразу на https, одним переходом)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # 2) Всегда https. Включается ТОЛЬКО после выпуска SSL-сертификата.
+  #    Если сайт уходит в бесконечную переадресацию — удалите эти три строки
+  #    и включите «Перенаправление на HTTPS» в панели хостинга.
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 3) Адреса работ без слеша на конце: /opushka → /opushka/
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^(polutone|voronka|opushka|slotwise|privacy|soglasie)$ https://%{HTTP_HOST}/$1/ [L,R=301]
+
+  # 4) Служебные файлы не отдаём (кроме .well-known — он нужен для SSL)
+  RewriteRule (^|/)\.(?!well-known) - [F,L]
+  RewriteRule \.(csv|log|md)$ - [F,L]
+</IfModule>
+
+# Типы файлов
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType image/svg+xml .svg
+
+# Сжатие
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript application/json image/svg+xml
+</IfModule>
+
+# Кэш: страницы — всегда свежие, картинки и шрифты — надолго
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Безопасность
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  <FilesMatch "\.(woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>

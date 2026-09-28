@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://antonshkel.ru/og-main.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex">
+<title>Страница не найдена — Антон Шкель</title>
+<link rel="preload" href="/fonts/intertight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jetbrainsmono.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Inter Tight';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/intertight.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(/fonts/jetbrainsmono.woff2) format('woff2')}
+</style>
+<style>
+:root{--bg:#fff;--bg-2:#F5F5F3;--ink:#0E0E0E;--ink-2:#3A3A37;--mute:#6B6B66;--line:#E6E6E1;--hot:#FF4D1A;--sans:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;--mono:'JetBrains Mono',ui-monospace,Consolas,monospace;--pad:clamp(20px,3.2vw,44px)}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1440px;margin:0 auto;padding-inline:var(--pad)}
+.hd{border-bottom:1px solid var(--line)}
+.hd .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:600;font-size:17px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.brand i{width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-style:normal;font-size:12.5px}
+.back{font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 16px;transition:background .3s}
+.back:hover{background:var(--bg-2)}
+.doc{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(32px,6vw,96px);padding-block:clamp(56px,8vw,110px)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px;margin:0 0 18px}
+.label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--hot)}
+h1{font-weight:500;font-size:clamp(30px,3vw,48px);font-size:clamp(26px,10.5cqi,52px);line-height:1.02;letter-spacing:-.04em;margin:0 0 20px;overflow-wrap:break-word;text-wrap:balance}
+.meta{color:var(--mute);font-size:15px;margin:0}
+.aside{position:sticky;top:32px;align-self:start;container-type:inline-size}
+.body h2{font-weight:500;font-size:clamp(22px,2vw,28px);letter-spacing:-.03em;line-height:1.2;margin:44px 0 12px}
+.body h2:first-child{margin-top:0}
+.body p,.body li{color:var(--ink-2);margin:0 0 12px}
+.body ul{padding-left:1.2em;margin:0 0 12px}
+.body .box{background:var(--bg-2);border-radius:16px;padding:20px 22px;margin:0 0 28px}
+.body .box p:last-child{margin:0}
+.fill{background:#FFF1B8;border-radius:4px;padding:0 4px}
+.foot{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:var(--mute);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--hot)}
+@media (max-width:860px){.doc{grid-template-columns:minmax(0,1fr)}.aside{position:static}}
+
+.ck-reset{align-items:center;gap:8px;font:inherit;font-size:15px;color:var(--ink);background:var(--bg-2);border:1px solid var(--line);border-radius:999px;padding:9px 16px;cursor:pointer;margin:4px 0 12px}
+.ck-reset:hover{border-color:var(--ink)}
+.ck-reset:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+
+.nf{min-height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;padding-block:60px}
+.nf b{display:block;font-size:clamp(120px,26vw,380px);font-weight:600;letter-spacing:-.07em;line-height:.8;margin:0 0 28px}
+.nf b i{font-style:normal;color:var(--hot)}
+.nf h1{margin-bottom:14px}
+.nf p{color:var(--ink-2);max-width:32em;margin:0 0 30px}
+.nf .links{display:flex;gap:12px;flex-wrap:wrap}
+.nf .links a{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:12px 20px;font-size:15.5px;transition:background .3s,color .3s,border-color .3s}
+.nf .links a:first-child{background:var(--ink);color:#fff;border-color:var(--ink)}
+.nf .links a:hover{background:var(--hot);color:#fff;border-color:var(--hot)}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap"><a class="brand" href="/"><i>А</i>Антон Шкель</a><a class="back" href="/">← На&nbsp;главную</a></div></header>
+
+<main class="wrap nf">
+  <b aria-hidden="true">4<i>0</i>4</b>
+  <h1>Такой страницы нет</h1>
+  <p>Возможно, ссылка устарела или в&nbsp;адресе опечатка. Вот что точно есть:</p>
+  <div class="links">
+    <a href="/">Главная</a>
+    <a href="/#work">Работы</a>
+    <a href="/polutone/">Полутон</a>
+    <a href="/voronka/">Воронка</a>
+    <a href="/opushka/">Опушка</a>
+    <a href="/slotwise/">Slotwise</a>
+  </div>
+</main>
+<style>
+.ck{position:fixed;left:16px;bottom:16px;z-index:9990;width:min(380px,calc(100vw - 32px));box-sizing:border-box;background:#111;color:#F4F4F1;border-radius:16px;
+  padding:16px 18px 16px;font:400 14px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;box-shadow:0 18px 50px -18px rgba(0,0,0,.6);display:none;text-align:left}
+.ck.on{display:block;animation:ckIn .5s cubic-bezier(.19,1,.22,1) both}
+@keyframes ckIn{from{opacity:0;transform:translateY(14px)}}
+.ck p{margin:0 0 12px;font:inherit;color:inherit;max-width:none}
+.ck a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.ck-b{display:flex;gap:8px;flex-wrap:wrap}
+.ck button{font:inherit;font-weight:500;line-height:1;padding:11px 18px;border-radius:999px;border:1px solid #F4F4F1;background:#F4F4F1;color:#111;cursor:pointer}
+.ck button.ck-no{background:transparent;color:#F4F4F1;border-color:rgba(244,244,241,.35)}
+.ck button:hover{opacity:.88}
+.ck button:focus-visible,.ck a:focus-visible{outline:2px solid #FF4D1A;outline-offset:2px}
+.ck [data-ck]{display:none}
+html:not([lang="en"]) .ck [data-ck="ru"],html[lang="en"] .ck [data-ck="en"]{display:inline}
+.ck-reset{display:none}
+html.has-ck .ck-reset{display:inline-flex}
+@media (prefers-reduced-motion:reduce){.ck.on{animation:none}}
+@media print{.ck{display:none!important}}
+</style>
+<div class="ck" id="ck" role="region" aria-label="Cookies" data-ym="__YM__">
+<p><span data-ck="ru">Я&nbsp;использую cookies и&nbsp;Яндекс Метрику, чтобы понимать, как люди пользуются сайтом. Аналитика включится, только если вы разрешите. <a href="/privacy/">Подробнее</a></span><span data-ck="en">I use cookies and Yandex Metrica to see how people use this site. Analytics runs only if you allow it. <a href="/privacy/">Privacy policy</a></span></p>
+<div class="ck-b"><button type="button" data-ck-yes><span data-ck="ru">Разрешить</span><span data-ck="en">Allow</span></button><button type="button" class="ck-no" data-ck-no><span data-ck="ru">Отказаться</span><span data-ck="en">Decline</span></button></div>
+</div>
+<script>
+(function(){
+  var box = document.getElementById('ck'); if (!box) return;
+  var ID = (box.getAttribute('data-ym') || '').trim();
+  if (!/^[0-9]{5,12}$/.test(ID)) return;               /* Метрика не подключена */
+  document.documentElement.classList.add('has-ck');
+  var KEY = 'ck-consent';
+  function get(){ try { return localStorage.getItem(KEY); } catch(e){ return null; } }
+  function set(v){ try { localStorage.setItem(KEY, v); } catch(e){} }
+  function load(){
+    if (window.YM_ID) return;
+    /* содержимое полей форм не попадает в Вебвизор */
+    [].forEach.call(document.querySelectorAll('input,textarea'), function(el){ el.classList.add('ym-disable-keys'); });
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=' + ID, 'ym');
+    window.YM_ID = +ID;
+    ym(+ID, 'init', {ssr:true, webvisor:true, clickmap:true, referrer:document.referrer, url:location.href, accurateTrackBounce:true, trackLinks:true});
+    /* значок ИКС Яндекс Вебмастера — тоже только после согласия */
+    var iks = document.querySelector('[data-iks]');
+    if (iks) {
+      var img = iks.querySelector('img'), en = document.documentElement.lang === 'en';
+      img.src = 'https://yandex.ru/cycounter?https://antonshkel.ru&theme=light&lang=' + (en ? 'en' : 'ru');
+      iks.hidden = false;
+    }
+  }
+  function wipe(){
+    document.cookie.split(';').forEach(function(c){
+      var n = c.split('=')[0].trim(); if (!/^_ym/.test(n)) return;
+      ['', location.hostname, '.' + location.hostname.replace(/^www\./, '')].forEach(function(d){
+        document.cookie = n + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : '');
+      });
+    });
+  }
+  function show(){ box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  box.querySelector('[data-ck-yes]').addEventListener('click', function(){ set('yes'); hide(); load(); });
+  box.querySelector('[data-ck-no]').addEventListener('click', function(){
+    var was = !!window.YM_ID; set('no'); hide(); wipe(); if (was) location.reload();
+  });
+  document.addEventListener('click', function(e){
+    var t = e.target && e.target.closest && e.target.closest('[data-ck-reset]'); if (!t) return;
+    e.preventDefault(); show(); var y = box.querySelector('[data-ck-yes]'); if (y) y.focus();
+  });
+  var v = get();
+  if (v === 'yes') load();
+  else if (v !== 'no') setTimeout(show, document.querySelector('.intro') ? 2600 : 500);
+})();
+</script>
+</body>
+</html>
