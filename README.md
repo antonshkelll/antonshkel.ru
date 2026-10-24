@@ -127,7 +127,7 @@ sudo bash deploy/setup-site.sh site
 
 Если нужен сайт, бот или AI-ассистент, пишите:
 
-- Telegram: [@antonloxxxxxxx](https://t.me/antonloxxxxxxx)
+- Telegram: [@antonshkelll](https://t.me/antonshkelll)
 - Почта: anton.shkel06@mail.ru
 - Сайт: [antonshkel.ru](https://antonshkel.ru)
 
