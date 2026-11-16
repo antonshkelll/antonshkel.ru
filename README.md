@@ -1,3 +1,7 @@
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/portfolio-dark.svg"><img src="assets/portfolio-light.svg" width="100%" alt="antonshkel.ru"></picture>
+
+[Профиль](https://github.com/antonshkelll) · [Портфолио](https://antonshkel.ru)
+
 <div align="center">
 
 <a href="https://antonshkel.ru"><img src="site/og-main.jpg" alt="antonshkel.ru — сайты, чат-боты и AI-ассистенты" width="100%"></a>
